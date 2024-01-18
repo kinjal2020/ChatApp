@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "206311270927",
+    "project_id": "chatapp-ebfa7",
+    "storage_bucket": "chatapp-ebfa7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206311270927:android:40a786b8146733166f917a",
+        "android_client_info": {
+          "package_name": "com.example.firebasedemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206311270927-od8abq8bli45ldl06d86968haofks9pd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebasedemo",
+            "certificate_hash": "8dd197aa5fce77c7bcc0359a193bda8b80c90ede"
+          }
+        },
+        {
+          "client_id": "206311270927-ubv531sba71iakolimufpecetqdtsha6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3Y-IuGZX_JWBIvs06HWLY1Q7EM_cOEKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206311270927-ubv531sba71iakolimufpecetqdtsha6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
