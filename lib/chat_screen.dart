@@ -42,7 +42,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         context: context,
                         builder: (context) => AlertDialog(
                               title: Text('Delete'),
-                              content: Text('Are you sure want to delete'),
+                              content: Text('Are you sure want to delete?'),
                               actions: [
                                 TextButton(
                                     onPressed: () {
@@ -91,10 +91,11 @@ class _ChatScreenState extends State<ChatScreen> {
                             child: Container(
                                 width: double.infinity,
                                 child: Align(
-                                    alignment: (index % 2 == 0)
-                                        ? Alignment.centerRight
-                                        : Alignment.centerLeft,
+                                    alignment: (data[index]['sendBy']==widget.email)
+                                        ? Alignment.centerLeft
+                                        : Alignment.centerRight,
                                     child: Container(
+
                                         child: Text(data[index]['message'])))),
                           ),
                         );
@@ -114,10 +115,9 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
             IconButton(
                 onPressed: () {
-
                   FirebaseFirestore.instance
                       .collection('Chat')
-                      .doc("${widget.authEmail}-${widget.email}")
+                      .doc(widget.docId)
                       .collection('chats')
                       .doc()
                       .set({
@@ -150,7 +150,7 @@ class _ChatScreenState extends State<ChatScreen> {
   deleteMessage(String id) {
     FirebaseFirestore.instance
         .collection('Chat')
-        .doc("test@yopmail.com-test1@yopmail.com")
+        .doc(widget.docId)
         .collection('chats')
         .doc(id)
         .delete();

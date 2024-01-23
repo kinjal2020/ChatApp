@@ -118,6 +118,11 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+
+  getDocData(){
+
+  }
+
   getUserDataFromFirebase() async {
     FirebaseFirestore.instance.collection('User').get().then((value) {
       print(value.docs.length);
